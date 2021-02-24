@@ -5,18 +5,18 @@ using namespace std;
 
 int main(){
 	fastio;
-	int n,sum=0;
+	int n;
 	cin>>n;
+	
 	for(int i=0; i<n; i++){
-		string str;
-		cin>>str;
-		if(str == "++X" || str == "X++"){
-			sum++;
-		}else if(str == "--X" || str == "X--"){
-			sum--;
+		string aux;
+		cin>>aux;
+		if(aux.size() > 10){
+			cout<<aux[0]<<(aux.size()-2)<<aux[aux.size()-1]<<"\n";
+		}else{
+			cout<<aux<<"\n";
 		}
-		str.clear();
+		aux.clear();
 	}
-	cout<<sum<<"\n";
 	return 0;
 }
